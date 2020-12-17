@@ -2,7 +2,6 @@ import isObject from '@tinkoff/utils/is/object';
 import isEmpty from '@tinkoff/utils/is/empty';
 import capitalize from '@tinkoff/utils/string/capitalize';
 import noop from '@tinkoff/utils/function/noop';
-import convertFieldsToCamelCase from './convertFieldsToCamelCase';
 import map from './map';
 import getTypeAlias from './getTypeAlias';
 
@@ -136,7 +135,7 @@ export const processingProperties = ({
         return getType({ sourceName, isCamelCase, registerSyntheticType, isRequired, typeDefinition: property });
     }, sourceProperties);
 
-    return isCamelCase ? properties : convertFieldsToCamelCase(properties);
+    return properties;
 };
 
 function getTypeString(isRequired, type) {
