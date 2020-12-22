@@ -139,5 +139,5 @@ export const processingProperties = ({
 };
 
 function getTypeString(isRequired, type) {
-    return `${isRequired ? '' : '?'}: ${type}`;
+    return `: ${type}`;
 }

@@ -79,6 +79,6 @@ exports.processingProperties = ({ sourceName, sourceProperties = {}, isCamelCase
     return properties;
 };
 function getTypeString(isRequired, type) {
-    return `${isRequired ? '' : '?'}: ${type}`;
+    return `: ${type}`;
 }
 //# sourceMappingURL=parse.js.map
